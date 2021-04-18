@@ -1,0 +1,367 @@
+@font-face {
+  font-family: workSans;
+  src: url(WorkSans-VariableFont_wght.ttf);
+}
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+body,
+html {
+  width: 100%;
+  height: 100%;
+  font-family: workSans;
+  display: flex;
+}
+
+.radar-animation {
+  background-color: rgb(68, 236, 236);
+  height: 100%;
+  width: 55%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.cr1 {
+  width: 30px;
+  height: 30px;
+  background-color: white;
+  border-radius: 50%;
+  opacity: 0.15;
+  position: absolute;
+
+  animation-name: cr-animation;
+  animation-duration: 4s;
+  animation-iteration-count: infinite;
+}
+
+.cr2 {
+  width: 30px;
+  height: 30px;
+  background-color: white;
+  border-radius: 50%;
+  opacity: 0.15;
+  position: absolute;
+
+  animation-name: cr-animation;
+  animation-duration: 4s;
+  animation-delay: 0.4s;
+  animation-iteration-count: infinite;
+}
+
+.cr3 {
+  width: 30px;
+  height: 30px;
+  background-color: white;
+  border-radius: 50%;
+  opacity: 0.15;
+  position: absolute;
+
+  animation-name: cr-animation;
+  animation-duration: 4s;
+  animation-delay: 0.8s;
+  animation-iteration-count: infinite;
+}
+
+.cr4 {
+  width: 30px;
+  height: 30px;
+  background-color: white;
+  border-radius: 50%;
+  opacity: 0.15;
+  position: absolute;
+
+  animation-name: cr-animation;
+  animation-duration: 4s;
+  animation-delay: 1.2s;
+  animation-iteration-count: infinite;
+}
+
+.cr5 {
+  width: 30px;
+  height: 30px;
+  background-color: white;
+  border-radius: 50%;
+  opacity: 0.15;
+  position: absolute;
+
+  animation-name: cr-animation;
+  animation-duration: 4s;
+  animation-delay: 1.6s;
+  animation-iteration-count: infinite;
+}
+
+.cr6 {
+  width: 30px;
+  height: 30px;
+  background-color: white;
+  border-radius: 50%;
+  opacity: 0.15;
+  position: absolute;
+
+  animation-name: cr-animation;
+  animation-duration: 4s;
+  animation-delay: 2s;
+  animation-iteration-count: infinite;
+}
+@keyframes cr-animation {
+  from {
+    opacity: 0.2;
+    transform: scale(2);
+  }
+  to {
+    opacity: 0;
+    transform: scale(20);
+  }
+}
+
+.line {
+  position: absolute;
+  width: 100rem;
+  height: 50%;
+  background: linear-gradient(
+    rgba(255, 255, 255, 0.5),
+    rgba(255, 255, 255, 0.1)
+  );
+  border: none;
+  animation-name: line-animation;
+  animation-iteration-count: infinite;
+  animation-duration: 8s;
+  animation-timing-function: linear;
+  overflow: hidden;
+  /*clip-path: polygon(50% 100%, 100% 50%, 100% 50%, 50% 50%);*/
+  clip-path: polygon(100% 52%, 100% 0, 50% 51%);
+}
+
+@keyframes line-animation {
+  from {
+    transform: rotate(0);
+  }
+
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.fa-shield-alt {
+  position: absolute;
+  font-size: 40px;
+  color: white;
+}
+
+.bottom-title {
+  color: white;
+  position: absolute;
+  bottom: 0;
+  margin-bottom: 5px;
+}
+
+.login-container {
+  width: 45%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: right;
+}
+
+.login {
+  width: 80%;
+  height: 85%;
+}
+
+.enter-title {
+  width: 100%;
+  height: 20%;
+  color: #469be6;
+  font-size: 15px;
+  font-weight: 700;
+}
+
+.login-title {
+  width: 100%;
+  height: 10%;
+  font-size: 30px;
+  font-weight: bold;
+}
+
+.login-description {
+  width: 100%;
+  height: 10%;
+  font-size: 18px;
+  color: gray;
+}
+
+form {
+  width: 100%;
+  height: 50%;
+  font-size: 18px;
+}
+
+.username-div,
+.password-div,
+.security-code,
+.code-input {
+  border-bottom: 2px solid rgb(168, 168, 168);
+  height: 10%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+}
+
+.password-div input,
+.username-div input,
+.security-code input {
+  border: none;
+  outline: none;
+  height: 18px;
+  width: 90%;
+  align-self: flex-end;
+}
+
+form input::placeholder {
+  text-align: right;
+  font-size: 18px;
+  margin-right: 5px;
+  color: rgb(168, 168, 168);
+}
+
+.password-div {
+  height: 20%;
+}
+
+form div i {
+  color: rgb(168, 168, 168);
+  align-self: flex-start;
+  margin-bottom: -10px;
+  margin-left: 10px;
+  font-size: small;
+}
+
+.security-code {
+  height: 20%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: flex-end;
+  border: none;
+}
+
+.code-input {
+  width: 65%;
+  height: 18px;
+}
+
+.code-input i {
+  margin-left: 2px;
+}
+
+.code {
+  width: 100px;
+  height: 30px;
+  border: none;
+  display: flex;
+  flex-direction: row;
+}
+
+.code i {
+  align-self: center;
+  margin: auto;
+  color: rgb(168, 168, 168);
+  font-size: medium;
+}
+
+.code img {
+  width: 60px;
+  height: 30px;
+  align-self: flex-end;
+}
+
+form button {
+  width: 100%;
+  padding: 8px;
+  background: #298de6;
+  color: white;
+  margin-top: 10%;
+  border: none;
+  outline: none;
+  border-radius: 5px;
+}
+
+form button:hover {
+  background: #0684f3;
+  cursor: pointer;
+}
+
+.remember-me {
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 10%;
+}
+
+.remember-me label {
+  margin-right: 5px;
+  color: rgb(168, 168, 168);
+  font-size: small;
+}
+.remember-me input {
+  align-self: center;
+  height: 10px;
+  width: 10px;
+}
+
+@media only screen and (min-width: 601px) and (max-width: 840px) {
+  body,
+  html {
+    flex-direction: column;
+  }
+
+  .radar-animation {
+    width: 100%;
+    height: 40%;
+  }
+
+  .login-container {
+    width: 100%;
+    height: 60%;
+  }
+
+  .login {
+    width: 80%;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  body,
+  html {
+    flex-direction: column;
+  }
+
+  .radar-animation {
+    width: 100%;
+    height: 40%;
+  }
+
+  .login-container {
+    width: 100%;
+    height: 60%;
+  }
+
+  .login {
+    width: 95%;
+  }
+
+  .login-title {
+    font-size: 25px;
+  }
+
+  .login-description {
+    font-size: 14px;
+  }
+}
